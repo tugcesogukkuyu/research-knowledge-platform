@@ -1,0 +1,28 @@
+# dependencies
+node_modules/
+
+# production
+dist/
+
+# environment variables
+.env
+.env.local
+.env.production
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# WordPress
+wordpress/wp-content/uploads/
+
+# build artifacts
+coverage/

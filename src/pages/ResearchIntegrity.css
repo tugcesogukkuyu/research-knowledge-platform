@@ -1,0 +1,240 @@
+.integrity-page {
+  overflow: hidden;
+}
+
+.integrity-hero {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 70px 28px 64px;
+  display: grid;
+  grid-template-columns: 1fr 460px;
+  gap: 60px;
+  align-items: center;
+}
+
+.breadcrumb {
+  margin-bottom: 34px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.integrity-hero h1 {
+  font-size: 66px;
+  line-height: 1;
+  letter-spacing: -0.055em;
+  color: #0f172a;
+}
+
+.integrity-hero p {
+  max-width: 620px;
+  margin-top: 24px;
+  color: #475569;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.integrity-hero-visual {
+  position: relative;
+  height: 260px;
+}
+
+.shield {
+  position: absolute;
+  z-index: 3;
+  left: 70px;
+  top: 78px;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 34px;
+  background: linear-gradient(145deg, #2563eb, #93c5fd);
+  color: #ffffff;
+  box-shadow: 0 28px 50px rgba(37, 99, 235, 0.22);
+}
+
+.shield svg {
+  width: 62px;
+  height: 62px;
+  stroke-width: 1.8;
+}
+
+.paper {
+  position: absolute;
+  width: 170px;
+  height: 210px;
+  border: 1px solid #bfdbfe;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.06);
+}
+
+.paper::before {
+  content: "";
+  position: absolute;
+  top: 34px;
+  left: 26px;
+  width: 96px;
+  height: 12px;
+  border-radius: 999px;
+  background: #cbd5e1;
+  box-shadow: 0 30px 0 #e2e8f0, 0 60px 0 #e2e8f0;
+}
+
+.paper-one {
+  right: 110px;
+  top: 28px;
+  transform: rotate(3deg);
+}
+
+.paper-two {
+  right: 10px;
+  top: 60px;
+  transform: rotate(8deg);
+}
+
+.integrity-intro {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 28px 28px;
+}
+
+.integrity-intro p {
+  max-width: 720px;
+  color: #334155;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.principles-list {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.principle-row {
+  min-height: 160px;
+  padding: 34px 40px;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 34px;
+  align-items: center;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+}
+
+.principle-row:first-child {
+  border-radius: 26px 26px 0 0;
+}
+
+.principle-row:last-child {
+  border-radius: 0 0 26px 26px;
+}
+
+.principle-row + .principle-row {
+  border-top: none;
+}
+
+.principle-icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+}
+
+.principle-icon svg {
+  width: 44px;
+  height: 44px;
+  stroke-width: 1.8;
+}
+
+.principle-row h2 {
+  margin-bottom: 12px;
+  color: #0f172a;
+  font-size: 28px;
+}
+
+.principle-row p {
+  max-width: 760px;
+  color: #475569;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.integrity-trust-banner {
+  max-width: 1280px;
+  margin: 42px auto 0;
+  padding: 32px 36px;
+  display: grid;
+  grid-template-columns: 78px 1fr auto;
+  gap: 26px;
+  align-items: center;
+  border: 1px solid #dbeafe;
+  border-radius: 26px;
+  background: linear-gradient(90deg, #f8fafc, #eff6ff);
+}
+
+.trust-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #2563eb, #93c5fd);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.trust-icon svg {
+  width: 36px;
+  height: 36px;
+  stroke-width: 1.8;
+}
+
+.integrity-trust-banner h2 {
+  margin-bottom: 8px;
+  color: #0f172a;
+  font-size: 26px;
+}
+
+.integrity-trust-banner p {
+  color: #475569;
+  line-height: 1.7;
+}
+
+.integrity-trust-banner a {
+  min-height: 54px;
+  padding: 0 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #93c5fd;
+  border-radius: 14px;
+  background: #ffffff;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+@media (max-width: 1000px) {
+  .integrity-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .integrity-hero h1 {
+    font-size: 48px;
+  }
+
+  .principle-row {
+    grid-template-columns: 1fr;
+  }
+
+  .integrity-trust-banner {
+    grid-template-columns: 1fr;
+  }
+}

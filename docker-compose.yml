@@ -1,0 +1,40 @@
+version: '3.9'
+
+services:
+  wordpress:
+    image: wordpress:latest
+    container_name: research-wordpress
+
+    ports:
+      - "8080:80"
+
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpresspass
+      WORDPRESS_DB_NAME: wordpress
+
+    volumes:
+      - wordpress_data:/var/www/html
+
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    container_name: research-mysql
+
+    restart: always
+
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpresspass
+      MYSQL_ROOT_PASSWORD: rootpass
+
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  wordpress_data:
+  db_data:
